@@ -1,0 +1,26 @@
+.chat {
+  &.fullScreen {
+    height: 100vh;
+  }
+
+  .paperStyles {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    max-width: 550px;
+    min-width: 200px;
+    width: calc(70% - 40px);
+  }
+
+  .scrollContainer {
+    height: 70vh;
+    overflow-y: auto;
+  }
+
+  .messagesContainer {
+    overflow-x: hidden;
+  }
+  .input {
+    margin: 5px;
+  }
+}

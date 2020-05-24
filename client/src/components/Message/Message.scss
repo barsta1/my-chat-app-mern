@@ -1,0 +1,117 @@
+@import "../../styles/colors";
+@import "../../styles/constants";
+
+.Message {
+  display: flex;
+  flex-direction: column;
+
+  .messageContainer {
+    max-width: 65%;
+    overflow-wrap: break-word;
+    display: flex;
+  }
+
+  .alignEnd {
+    align-self: flex-end;
+  }
+
+  .alignStart {
+    align-self: flex-start;
+  }
+
+  .containerStart {
+    justify-content: flex-start;
+  }
+
+  .containerEnd {
+    justify-content: flex-end;
+  }
+
+  .active {
+    transition: $TRANSITION_DURATION;
+    &:hover {
+      position: relative;
+      transform: translateX(3px)
+    }
+  }
+
+  .message {
+    display:block;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    margin: 6px 10px;
+    overflow-wrap: break-word;
+    padding: 8px 13px;
+    transition: $TRANSITION_DURATION;
+    max-width: 85%;
+    &.deleted {
+      background-color: transparent;
+      color: $GREY;
+      border-color: $GREY;
+      cursor: default;
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .clicked {
+    transform: translateX(3px)
+  }
+
+  .userMessage {
+    align-self: flex-end;
+    background-color: $BLUE;
+    color: $WHITE;
+    cursor: pointer;
+    position: relative;
+    margin-left: 1px;
+    .disabled {
+      cursor: default;
+    }
+  }
+
+  .timeSpan {
+    color:	$GREY;
+    font-style: italic;
+    font-size: 13px;
+    align-self: flex-end;
+  }
+
+  .deleteIcon {
+    color: $GREY;
+    left: -18px;
+    position: absolute;
+    top: -12px;
+    transition: $TRANSITION_DURATION;
+    &:hover {
+      color: $DARK_RED;
+    }
+
+    &.iconVisible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &.iconHidden {
+      opacity: 0;
+      transform: scale(0.3);
+      visibility: hidden;
+    }
+  }
+
+  .otherMessage {
+    align-self: flex-start;
+    background-color: $LIGHT_GREY;
+    margin-right: 1px;
+  }
+
+  .userName {
+      color:	$GREY;
+      font-style: italic;
+      left: 15px;
+      position: relative;
+      top: -5px;
+  }
+}

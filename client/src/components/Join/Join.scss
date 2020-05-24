@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+
+.join {
+  overflow-x: hidden;
+  &.fullScreen {
+    height: 80vh;
+  }
+
+  .inputWidth {
+    max-width: 350px;
+    min-width: 200px;
+    width: 50vw;
+  }
+
+  .bgWhite {
+    background-color: $WHITE;
+  }
+
+  .joinButton {
+    margin-top: 8px;
+  }
+}

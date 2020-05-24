@@ -1,0 +1,73 @@
+@import "../../styles/colors";
+@import "../../styles/constants";
+
+.chatBar {
+  .appBar {
+    /* Used "important!" in order to override Material UI default styles"*/
+    background: $BLUE !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .activeDotContainer {
+    margin-right: 18px;
+    position: relative;
+    top: 10px;
+  }
+
+  .activeDot {
+    background: $LIME;
+    border-radius: 50%;
+    height: 12px;
+    position: absolute;
+    transition: $TRANSITION_DURATION;
+    width: 12px;
+    cursor: pointer;
+  }
+
+  .roomName {
+    cursor: pointer;
+    &:hover .activeDot {
+      transform: scale(1.2);;
+    }
+  }
+
+  .leaveIcon {
+    color: $WHITE;
+    cursor: pointer;
+    position: relative;
+    right: -10px;
+    top: -5px;
+    transition: $TRANSITION_DURATION;
+    &:hover {
+      color: $DARK_RED;
+    }
+  }
+}
+
+/* Used "important!" in order to override Material UI default styles"*/
+.leaveButton {
+  background: $DARK_RED !important;
+  color: $WHITE !important;
+}
+
+.space-left {
+  position: relative;
+  right: -8px;
+}
+
+.space-right {
+  left: -8px;
+  position: relative;
+}
+
+.usersCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.userChip {
+  margin: 2px;
+}
