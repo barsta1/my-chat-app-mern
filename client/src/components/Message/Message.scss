@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
 
+  .disabled {
+    cursor: default;
+  }
+
   .messageContainer {
     max-width: 65%;
     overflow-wrap: break-word;
@@ -36,15 +40,20 @@
   }
 
   .message {
-    display:block;
-    flex-wrap: wrap;
     border-radius: 25px;
     border: 1px solid transparent;
+    display:block;
+    flex-wrap: wrap;
     margin: 6px 10px;
+    max-width: 85%;
     overflow-wrap: break-word;
     padding: 8px 13px;
     transition: $TRANSITION_DURATION;
-    max-width: 85%;
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    white-space: -pre-wrap;     /* Opera 7 */   
+    white-space: pre-wrap;      /* CSS3 */   
+    word-wrap: break-word;      /* IE */
     &.deleted {
       background-color: transparent;
       color: $GREY;
@@ -67,9 +76,6 @@
     cursor: pointer;
     position: relative;
     margin-left: 1px;
-    .disabled {
-      cursor: default;
-    }
   }
 
   .timeSpan {
